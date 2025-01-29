@@ -12,5 +12,5 @@ Quero registrar tanto projetos simples quanto desafiadores para medir cada peque
 
 🔍 Explorando Funcionalidades
 
-Usarei este repositório para testar e aprimorar meu uso das diversas funcionalidades do GitHub ( e aprender a usá-lo 👩‍💻).
+Usarei este repositório para testar e aprimorar meu uso das diversas funcionalidades do GitHub 👩‍💻.
 
