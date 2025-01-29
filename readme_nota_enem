@@ -5,6 +5,8 @@ Meu desejo era criar algo autêntico e direto. Ao iniciar meus próprios projeto
 📋 Funcionalidades/Descrição
 
 O programa solicita informações como nome e data de nascimento e, em seguida, calcula e exibe a média final das notas fornecidas, juntamente com os dados coletados.
+(Observação: As informações solicitadas não são armazenadas; elas são apenas coletadas e exibidas temporariamente.)
+
 
 Para algumas funções, como strtok, contei com a ajuda de uma IA, já que não estava familiarizada com essa função anteriormente.
 
