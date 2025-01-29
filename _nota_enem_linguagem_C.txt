@@ -1,7 +1,4 @@
-// Este é um programa que eu criei com base nas funções que aprendi no curso. 
-// Meu objetivo foi desenvolver algo simples e funcional, por isso talvez existam alternativas melhores.
-// O programa pede informações como nome e data de nascimento e imprime na tela a média final, junto aos dados coletados.
-// Para algumas funções, como a strtok, contei com a ajuda de uma IA, já que não conhecia essa função anteriormente.
+//Cálculo da média da nota do Enem, linguagem c
 
 #include <stdio.h>
 #include <stdlib.h>
