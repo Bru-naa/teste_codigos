@@ -1,0 +1,117 @@
+// Este é um programa que eu criei com base nas funções que aprendi no curso. 
+// Meu objetivo foi desenvolver algo simples e funcional, por isso talvez existam alternativas melhores.
+// O programa pede informações como nome e data de nascimento e imprime na tela a média final, junto aos dados coletados.
+// Para algumas funções, como a strtok, contei com a ajuda de uma IA, já que não conhecia essa função anteriormente.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main() {
+    setlocale(LC_ALL, "portuguese");
+    char nome[50], curso[50], comando;
+    int dia, mes, ano, num, idade, reiniciar = 1;
+    float n1, n2, n3, n4, n5, media;
+
+    // Loop principal para reiniciar ou encerrar o programa
+    while (reiniciar) {
+        num = 3; // Reseta o contador de contagem progressiva
+
+        // Dados pessoais do candidato
+        printf("Olá, digite seu nome: ");
+        fgets(nome, 50, stdin);
+        strtok(nome, "\n"); // Remove o '\n' do final da string
+
+        printf("Qual o curso pretendido? ");
+        fgets(curso, 50, stdin);
+        strtok(curso, "\n"); // Remove o '\n' do final da string
+
+        printf("\nDia de nascimento (ex.: 02, 03, 27): ");
+        scanf("%d", &dia);
+
+        printf("Mês de nascimento (ex.: 02 para fevereiro): ");
+        scanf("%d", &mes);
+
+        printf("Ano de nascimento (formato aaaa, ex.: 2024, 1920, 1980): ");
+        scanf("%d", &ano);
+
+        // Limpar o buffer do stdin
+        while (getchar() != '\n');
+
+        // Notas do ENEM
+        printf("\nNota de Ciências da Natureza e suas Tecnologias (use '.'): ");
+        scanf("%f", &n1);
+
+        printf("Nota de Ciências Humanas e suas Tecnologias (use '.'): ");
+        scanf("%f", &n2);
+
+        printf("Nota de Linguagens, Códigos e suas Tecnologias (use '.'): ");
+        scanf("%f", &n3);
+
+        printf("Nota de Matemática e suas Tecnologias (use '.'): ");
+        scanf("%f", &n4);
+
+        printf("Nota da Redação (use '.'): ");
+        scanf("%f", &n5);
+
+        // Calcular a média
+        media = (n1 + n2 + n3 + n4 + n5) / 5;
+
+        // Análise da média e indicadores
+        if (media >= 700) {
+            printf("\nParabéns, %s! Você alcançou uma média aritmética alta.", nome);
+        } else if (media >= 590 && media < 700) {
+            printf("\nSua média aritmética é um pouco maior que a média nacional.");
+        } else if (media >= 0) {
+            printf("\n%s, sua média aritmética está abaixo da média nacional.", nome);
+        } else {
+            printf("\nErro: média inválida. Verifique se as notas foram inseridas corretamente.");
+        }
+
+        // Cálculo da idade
+        idade = 2024 - ano;
+
+        // Dados coletados finais
+        printf("\n%s, nascido em %d/%d/%d.", nome, dia, mes, ano);
+        printf("Idade: %d ano(s)", idade);
+        printf("\nSua média aritmética final é: %.1f", media);
+        printf("\nPara o curso: %s", curso);
+        printf("\nBoa sorte, %s em sua jornada!\n", nome);
+
+        // Menu de comando
+        printf("\nS - para sair e V - para voltar: ");
+        while (getchar() != '\n'); // Limpar o buffer do stdin antes de ler o comando
+        comando = getchar();
+
+        // Processar comando
+        switch (comando) {
+            case 'S':
+            case 's':
+                printf("\nSaindo...\n");
+                while (num >= 0) { // Contagem regressiva
+                    printf("\n%d\n", num);
+                    num--;
+                }
+                reiniciar = 0; // Sair do loop principal
+                break;
+
+            case 'V':
+            case 'v':
+                printf("\nReiniciando...\n");
+                while (num >= 0) { // Contagem regressiva
+                    printf("\n%d\n", num);
+                    num--;
+                }
+                reiniciar = 1; // Reinicia o loop principal
+                break;
+
+            default:
+                printf("\nCaractere inválido! Por gentileza, utilize os comandos 'S' para sair ou 'V' para voltar.\n");
+                reiniciar = 0; // Sair do loop em caso de comando inválido
+                break;
+        }
+    }
+
+    return 0;
+}
