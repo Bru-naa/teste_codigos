@@ -1,7 +1,7 @@
 
 📚 Objetivo
 
-Quero registrar tanto projetos simples quanto desafiadores para medir cada pequeno progresso enquanto descubro as funcionalidades do GitHub.
+Quero registrar tanto projetos simples quanto desafiadores para medir cada pequeno progresso.
 
 📝 O Que Você Vai Encontrar
 
