@@ -9,7 +9,8 @@ public class Semana {
         System.out.println("Digite um valor de 1 a 7, para representar os dias da semana:");
         opcao= scan.nextInt();
        scan.close();
-      
+
+   //Apos pedir o valor retornara com o dia correspondente, se não tiver ira para o default   
        switch (opcao) {
             case 1:
                 System.out.println("\n1-Domingo");
